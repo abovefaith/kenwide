@@ -37,3 +37,10 @@ document.querySelector('#close-form').onclick = () =>{
 };
 
 
+var swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
+

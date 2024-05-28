@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
+
+// import Swiper, { Pagination } from 'swiper';
+
+import Swiper from 'swiper';
+
+// Import Swiper styles
+import 'swiper/swiper-bundle.min.css';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit{
   isNavbarActive: boolean = false;   // Handle the navbar state
   isRegisterActive: boolean = false;
   isLoginActive: boolean = true;  // Login form is active by default
@@ -48,5 +55,20 @@ export class HomeComponent {
     // Handle register form submission
     console.log('Register form submitted');
   }
+
+  ngAfterViewInit(): void {
+    // Swiper.use([Pagination]);  // Use the pagination module
+
+    new Swiper('.home-slider', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable:true,
+      },
+      loop: true,
+      grabCursor: true,
+    });
+  }
+
+
 
 }

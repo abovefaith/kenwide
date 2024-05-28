@@ -5,8 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>home</title>
+
   <!-- font awesome cdn link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- swiper css link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <!-- custom css file link -->
   <!-- <link rel="stylesheet" href="src\styles.scss"> -->
 </head>
@@ -16,6 +21,48 @@
   <!-- header section starts: moved to NavbarComponent -->
   <app-navbar></app-navbar>
   <!-- header section ends -->
+
+  <!-- home section starts -->
+
+  <div class="home">
+
+    <div class=" swiper home-slider">
+
+      <div class="swiper-wrapper">
+
+        <section class="swiper-slide slide" style="background: url(assets/images/home-slide-1.jpg) no-repeat;">
+          <div class="content">
+            <h3>the best course you will find here!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn">get started</a>
+          </div>
+        </section>
+
+        <section class="swiper-slide slide" style="background: url(assets/images/home-slide-2.jpg) no-repeat;">
+          <div class="content">
+            <h3>the best course you will find here!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn">get started</a>
+          </div>
+        </section>
+
+        <section class="swiper-slide slide" style="background: url(assets/images/home-slide-3.jpg) no-repeat;">
+          <div class="content">
+            <h3>the best course you will find here!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn">get started</a>
+          </div>
+        </section>
+
+
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+  <!-- home section ends -->
 
 
 
