@@ -67,6 +67,25 @@ export class HomeComponent implements AfterViewInit{
       loop: true,
       grabCursor: true,
     });
+
+    new Swiper('.home-courses-slider', {
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 20,
+
+
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        991: {
+          slidesPerView: 3,
+        },
+      },
+    });
   }
 
 
