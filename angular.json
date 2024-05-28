@@ -99,10 +99,15 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/script.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f6f540a3-9f27-4846-961e-ceea918e5eef"
   }
 }
