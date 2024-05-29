@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import Swiper from 'swiper';
+
 
 @Component({
   selector: 'app-root',

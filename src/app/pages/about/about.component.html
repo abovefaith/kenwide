@@ -1,51 +1,91 @@
 <!-- <p>about works!</p> -->
 <app-navbar></app-navbar>
 
-
 <section class="heading-link">
   <h3>about us</h3>
-  <p><a routerLink="/home" >home</a> / about </p>
+  <p><a routerLink="/home">home</a> / about</p>
 </section>
 
 <!-- about section starts -->
 
 <section class="about">
-
   <div class="image">
-    <img src="assets/images/home-slide-4.png" alt="">
+    <img src="assets/images/about-img.jpg" alt="" />
   </div>
 
   <div class="content">
     <h3 class="about-title">we have best courses for you</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, quasi nobis. Enim, laboriosam placeat! Voluptatum numquam iste culpa rem. Veniam tenetur nemo nam ducimus vero dolore eaque. Mollitia, accusamus hic.</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, quasi
+      nobis. Enim, laboriosam placeat! Voluptatum numquam iste culpa rem. Veniam
+      tenetur nemo nam ducimus vero dolore eaque. Mollitia, accusamus hic.
+    </p>
     <div class="icons-container"></div>
     <div class="icons">
-      <img src="assets/images/home-slide-12.png" alt="">
+      <img src="assets/images/about-icon-1.png" alt="" />
       <h3>350+</h3>
       <span>courses</span>
     </div>
     <div class="icons">
-      <img src="assets/images/home-slide-13.png" alt="">
+      <img src="assets/images/about-icon-2.png" alt="" />
       <h3>1200+</h3>
       <span>students</span>
     </div>
     <div class="icons">
-      <img src="assets/images/home-slide-10.png" alt="">
+      <img src="assets/images/about-icon-3.png" alt="" />
       <h3>10+</h3>
       <span>awards</span>
     </div>
   </div>
 </section>
 
-
-
-
 <!-- about section ends -->
 
+<!-- teachers section starts -->
 
+<section class="teachers">
+  <h1 class="heading">expert teachers</h1>
+  <div class="swiper teachers-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide" *ngFor="let teacher of teachers">
+        <div class="image">
+          <img [src]="teacher.image" alt="" />
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>{{ teacher.name }}</h3>
+          <span>{{ teacher.title }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- teachers section ends -->
 
+<!-- students reviews section starts -->
 
+<section class="reviews">
+  <h1 class="heading">our students review</h1>
+  <div class="swiper reviews-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide" *ngFor="let review of reviews">
+        <p>{{ review.text }}</p>
+        <img [src]="review.image" alt="" />
+        <h3>{{ review.name }}</h3>
+        <div class="stars">
+          <i class="fas fa-star" *ngFor="let star of review.stars; let i = index"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- students review section ends -->
 
 <app-footer></app-footer>

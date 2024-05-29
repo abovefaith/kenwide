@@ -1,11 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
-
 // import Swiper, { Pagination } from 'swiper';
-
 import Swiper from 'swiper';
-
-// Import Swiper styles
-import 'swiper/swiper-bundle.min.css';
 
 @Component({
   selector: 'app-home',
@@ -13,48 +8,24 @@ import 'swiper/swiper-bundle.min.css';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements AfterViewInit{
-  isNavbarActive: boolean = false;   // Handle the navbar state
-  isRegisterActive: boolean = false;
-  isLoginActive: boolean = true;  // Login form is active by default
-  isAccountFormActive: boolean = false;
 
-  openNavbar() {
-    this.isNavbarActive = true;
-  }
+  subjects = [
+    { image: 'assets/images/home-slide-1.jpg', title: 'graphic design', modules: 12 },
+    { image: 'assets/images/home-slide-2.jpg', title: 'mathematics', modules: 12 },
+    { image: 'assets/images/home-slide-3.jpg', title: 'teaching', modules: 12 },
+    { image: 'assets/images/home-slide-4.jpg', title: 'development', modules: 12 },
+    { image: 'assets/images/home-slide-8.jpg', title: 'science', modules: 12 },
+    { image: 'assets/images/home-slide-9.jpg', title: 'engineering', modules: 12 },
+  ];
 
-  closeNavbar() {
-    this.isNavbarActive = false;
-  }
-
-
-
-  showRegisterForm() {
-    this.isRegisterActive = true;
-    this.isLoginActive = false;
-  }
-
-  showLoginForm() {
-    this.isRegisterActive = false;
-    this.isLoginActive = true;
-  }
-
-  openAccountForm() {
-    this.isAccountFormActive = true;
-  }
-
-  closeAccountForm() {
-    this.isAccountFormActive = false;
-  }
-
-  onSubmitLogin() {
-    // Handle login form submission
-    console.log('Login form submitted');
-  }
-
-  onSubmitRegister() {
-    // Handle register form submission
-    console.log('Register form submitted');
-  }
+  courses = [
+    { image: 'assets/images/home-slide-11.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-slide-1.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-slide-12.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-slide-13.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-slide-1.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-slide-2.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+  ];
 
   ngAfterViewInit(): void {
     // Swiper.use([Pagination]);  // Use the pagination module
@@ -72,8 +43,6 @@ export class HomeComponent implements AfterViewInit{
       loop: true,
       grabCursor: true,
       spaceBetween: 20,
-
-
       breakpoints: {
         0: {
           slidesPerView: 2,
@@ -86,6 +55,7 @@ export class HomeComponent implements AfterViewInit{
         },
       },
     });
+
   }
 
 
