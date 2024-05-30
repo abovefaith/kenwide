@@ -10,21 +10,21 @@ import Swiper from 'swiper';
 export class HomeComponent implements AfterViewInit{
 
   subjects = [
-    { image: 'assets/images/home-slide-1.jpg', title: 'graphic design', modules: 12 },
-    { image: 'assets/images/home-slide-2.jpg', title: 'mathematics', modules: 12 },
-    { image: 'assets/images/home-slide-3.jpg', title: 'teaching', modules: 12 },
-    { image: 'assets/images/home-slide-4.jpg', title: 'development', modules: 12 },
-    { image: 'assets/images/home-slide-8.jpg', title: 'science', modules: 12 },
-    { image: 'assets/images/home-slide-9.jpg', title: 'engineering', modules: 12 },
+    { image: 'assets/images/subject-icon-1.jpg', title: 'A1', modules: 12 },
+    { image: 'assets/images/subject-icon-2.jpg', title: 'A2', modules: 12 },
+    { image: 'assets/images/subject-icon-3.jpg', title: 'B1', modules: 12 },
+    { image: 'assets/images/subject-icon-4.jpg', title: 'B2', modules: 12 },
+    { image: 'assets/images/subject-icon-5.jpg', title: 'C1', modules: 12 },
+    { image: 'assets/images/subject-icon-6.jpg', title: 'C2', modules: 12 },
   ];
 
   courses = [
-    { image: 'assets/images/home-slide-11.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-    { image: 'assets/images/home-slide-1.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-    { image: 'assets/images/home-slide-12.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-    { image: 'assets/images/home-slide-13.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-    { image: 'assets/images/home-slide-1.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-    { image: 'assets/images/home-slide-2.jpg', title: 'Web development', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-courses-1-1.jpg', title: 'A1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-courses-1-2.jpg', title: 'A2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-courses-1-3.jpg', title: 'B1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-courses-1-4.jpg', title: 'B2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-courses-1-5.jpg', title: 'C1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-courses-1-6.jpg', title: 'C2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
   ];
 
   ngAfterViewInit(): void {

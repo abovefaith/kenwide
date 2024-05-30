@@ -12,32 +12,32 @@ import 'swiper/swiper-bundle.min.css';
 export class AboutComponent implements AfterViewInit {
   teachers = [
     {
-      image: 'assets/images/teacher-1.png',
+      image: 'assets/images/teacher-1.jpg',
       name: 'John Deo',
       title: 'expert tutor',
     },
     {
-      image: 'assets/images/teacher-2.png',
+      image: 'assets/images/teacher-2.jpg',
       name: 'John Deo',
       title: 'expert tutor',
     },
     {
-      image: 'assets/images/teacher-3.png',
+      image: 'assets/images/teacher-3.avif',
       name: 'John Deo',
       title: 'expert tutor',
     },
     {
-      image: 'assets/images/teacher-4.png',
+      image: 'assets/images/teacher-4.jpg',
       name: 'John Deo',
       title: 'expert tutor',
     },
     {
-      image: 'assets/images/teacher-5.png',
+      image: 'assets/images/teacher-5.jpg',
       name: 'John Deo',
       title: 'expert tutor',
     },
     {
-      image: 'assets/images/teacher-6.png',
+      image: 'assets/images/teacher-6.avif',
       name: 'John Deo',
       title: 'expert tutor',
     },
@@ -46,37 +46,37 @@ export class AboutComponent implements AfterViewInit {
   reviews = [
     {
       text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-      image: 'assets/images/pic-1.png',
+      image: 'assets/images/pic-1.jpg',
       name: 'John Deo',
       stars: [1, 1, 1, 1, 0.5],
     },
     {
       text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-      image: 'assets/images/pic-2.png',
+      image: 'assets/images/pic-2.avif',
       name: 'John Deo',
       stars: [1, 1, 1, 1, 0.5],
     },
     {
       text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-      image: 'assets/images/pic-3.png',
+      image: 'assets/images/pic-3.jpg',
       name: 'John Deo',
       stars: [1, 1, 1, 1, 0.5],
     },
     {
       text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-      image: 'assets/images/pic-4.png',
+      image: 'assets/images/pic-4.avif',
       name: 'John Deo',
       stars: [1, 1, 1, 1, 0.5],
     },
     {
       text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-      image: 'assets/images/pic-5.png',
+      image: 'assets/images/pic-5.avif',
       name: 'John Deo',
       stars: [1, 1, 1, 1, 0.5],
     },
     {
       text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-      image: 'assets/images/pic-6.png',
+      image: 'assets/images/pic-6.jpg',
       name: 'John Deo',
       stars: [1, 1, 1, 1, 0.5],
     },

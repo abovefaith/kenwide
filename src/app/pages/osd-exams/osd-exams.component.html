@@ -1,6 +1,37 @@
 <!-- <p>osd-exams works!</p> -->
 <app-navbar></app-navbar>
 
+<section class="heading-link">
+  <h3> ÖSD exams</h3>
+  <p><a routerLink="/home">home</a> /  ÖSD exams</p>
+</section>
+
+<section class="osd-exams">
+  <h1 class="heading">ÖSD Examinations Offered</h1>
+  <div class="box-container">
+    <div class="box" *ngFor="let course of visibleOsd">
+      <div class="image">
+        <img [src]="course.image" alt="" />
+        <h2>{{ course.title }}</h2>
+      </div>
+      <div class="content">
+        <p><strong>{{ course.description }}</strong></p>
+        <p><i class="fa-regular fa-calendar"></i> Exam Date: {{ formatExamDates(course.examDates) }}</p>
+        <p><i class="fa-regular fa-calendar-xmark"></i> Registration Deadline: {{ course.registrationDeadline | date : "longDate"}}</p>
+        <p><i class="fa-solid fa-money-check"></i> Exam Fee: Kshs. {{course.examFee}}</p>
+        <a href="#" class="btn">Register Here <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="icons">
+          <span><i class="fas fa-book"></i> 2 modules </span>
+          <span><i class="fas fa-clock"></i> 6 hours </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="load-more">
+    <div class="btn" *ngIf="showLoadMore" (click)="loadMore()">load more</div>
+  </div>
+</section>
+
 
 
 

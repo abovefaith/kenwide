@@ -68,12 +68,13 @@ section {
 
 .heading-link {
   text-align: center;
-  background: url(assets/images/heading-bg.jpg) no-repeat;
+  background: url(assets/images/heading-bg.avif) no-repeat;
   background-size: cover;
   background-position: center;
 
   h3 {
     @include titleText(4rem);
+    color: $white
   }
 
   p {
@@ -404,7 +405,7 @@ section {
     flex: 1 1 40rem;
 
     img {
-      width: 100%;
+      width: 50%;
     }
   }
 
@@ -595,6 +596,81 @@ section {
         border: $border;
 
         h3 {
+          @include titleText(2rem);
+        }
+
+        p {
+          padding: 1rem 0;
+          @include graphText(1.6rem);
+        }
+
+        .icons {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 2rem;
+          padding-top: 2rem;
+          border-top: $border;
+
+          span {
+            @include titleText(1.5rem);
+
+            i {
+              color: $green;
+              padding-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .load-more {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+
+.osd-exams {
+  .box-container {
+    @include grid(30rem);
+
+    .box {
+      &:hover .image img {
+        transform: scale(1.1);
+      }
+
+      &.hide {
+        display: none;
+      }
+
+      .image {
+        height: 25rem;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        h2 {
+          @include titleText(1.5rem);
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          padding: 0.5rem 1.5rem;
+          background: $white;
+        }
+      }
+
+      .content {
+        padding: 2rem;
+        text-align: center;
+        border: $border;
+
+        h2 {
           @include titleText(2rem);
         }
 
