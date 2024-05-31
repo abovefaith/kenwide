@@ -794,7 +794,7 @@ section {
 
         &:focus {
           border: 3px solid $green;
-          color: $white;
+          // color: $white;
 
           &::placeholder {
             color: $light-white;
