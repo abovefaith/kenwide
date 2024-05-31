@@ -44,7 +44,7 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 10px;
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
@@ -171,13 +171,13 @@ section {
       &:hover {
         color: $green;
         text-decoration: underline;
-        text-decoration-color: $green; 
+        text-decoration-color: $green;
         text-decoration-thickness: 3px;
       }
       &.active {
         color: $green;
         text-decoration: underline;
-        text-decoration-color: $green; 
+        text-decoration-color: $green;
         text-decoration-thickness: 3px;
       }
     }
@@ -368,6 +368,7 @@ section {
 
 .home-courses {
   .slide {
+    height: 325px;
     text-align: center;
     position: relative;
     background: $light-green;
@@ -378,7 +379,7 @@ section {
     }
 
     .image {
-      padding: 2rem;
+      padding:0 0 2rem 0;
 
       img {
         width: 100%;
@@ -1027,5 +1028,109 @@ section {
 
   .about .content .about-title {
     font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    #menu-btn {
+      display: inline-block;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: -105%;
+      width: 30rem;
+      background: $white;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      z-index: 1200;
+
+      #close-navbar {
+        display: block;
+      }
+
+      a {
+        display: block;
+        margin: 1rem 0;
+        text-align: center;
+        font-size: 1rem;
+        &.active {
+          box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+          right: 0;
+          color: $green;
+        }
+      }
+    }
+  }
+
+  .home .slide .content h3 {
+    font-size: 3rem;
+  }
+
+  .roles-image {
+    display: none;
+  }
+}
+
+.roles-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4rem 0px;
+  .heading {
+    text-align: start;
+  }
+}
+
+.roles {
+  &__card {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    padding: 2rem;
+    font-size: 1.5rem;
+    background: $light-green;
+    cursor: pointer;
+
+    &:hover {
+      background: $green;
+
+      h3 {
+        color: $white;
+      }
+
+      p {
+        color: $light-white;
+      }
+    }
+  }
+}
+
+.roles-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roles-list {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .roles-image {
+    display: none;
+  }
+  .roles-list {
+    width: 100%;
+  }
+
+  .roles-wrapper {
+    .heading {
+      text-align: center;
+    }
   }
 }
