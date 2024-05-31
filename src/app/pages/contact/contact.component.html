@@ -3,8 +3,11 @@
 
 <section class="heading-link">
   <section class="heading-wrapper">
-  <h3>contact us</h3>
-  <p><a routerLink="/home">home</a> <span class="current-route"> / contact us</span></p>
+    <h3>contact us</h3>
+    <p>
+      <a routerLink="/home">home</a>
+      <span class="current-route"> / contact us</span>
+    </p>
   </section>
 </section>
 
@@ -29,14 +32,22 @@
     <div class="icons">
       <i class="fas fa-envelope"></i>
       <h3>email</h3>
-      <p><a href= "mailto: admin@kenwideinstitute.com"> {{'admin@kenwideinstitute.com'}} </a></p>
-      <p><a href= "mailto: info@kenwideinstitute.com"> {{'info@kenwideinstitute.com'}} </a></p>
+      <p>
+        <a href="mailto: admin@kenwideinstitute.com">
+          {{ "admin@kenwideinstitute.com" }}
+        </a>
+      </p>
+      <p>
+        <a href="mailto: info@kenwideinstitute.com">
+          {{ "info@kenwideinstitute.com" }}
+        </a>
+      </p>
     </div>
 
     <div class="icons">
       <i class="fas fa-map"></i>
       <h3>address</h3>
-      <p>Nairobi, kenya - 00200</p>
+      <p>Muthaiga North crescent, Muthaiga Road, Muthaiga, Nairobi</p>
     </div>
   </div>
 
@@ -46,13 +57,23 @@
     </div>
 
     <!-- <form action="" (submit)="sendMessage($event)"> -->
-    <form action="mailto:info@kenwideinstitute.com" method="post" enctype="text/plain">
-
+    <form
+      action="mailto:info@kenwideinstitute.com"
+      method="post"
+      enctype="text/plain"
+    >
       <h3>send us a message</h3>
       <input type="text" placeholder="name" name="name" class="box" />
       <input type="email" placeholder="email" name="email" class="box" />
       <input type="text" placeholder="phone" name="phone" class="box" />
-      <textarea id="" class="box" placeholder="message"  name="message" cols="30" rows="10"></textarea>
+      <textarea
+        id=""
+        class="box"
+        placeholder="message"
+        name="message"
+        cols="30"
+        rows="10"
+      ></textarea>
       <input type="submit" value="send message" class="btn" />
     </form>
   </div>
@@ -66,7 +87,12 @@
   <h1 class="heading">frequently asked questions</h1>
 
   <div class="accordion-container">
-    <div class="accordion" *ngFor="let item of faqItems" [class.active]="item.active" (click)="toggleAccordion(item)">
+    <div
+      class="accordion"
+      *ngFor="let item of faqItems"
+      [class.active]="item.active"
+      (click)="toggleAccordion(item)"
+    >
       <div class="accordion-heading">
         <h3>{{ item.question }}</h3>
         <i class="fas fa-angle-down"></i>
