@@ -1,101 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>home</title>
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
-  <!-- font awesome cdn link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- swiper css link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
 
-  <!-- swiper css link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
+  <body>
+    <!-- header section starts: moved to NavbarComponent -->
+    <app-navbar></app-navbar>
+    <!-- header section ends -->
 
-<body>
-  <!-- header section starts: moved to NavbarComponent -->
-  <app-navbar></app-navbar>
-  <!-- header section ends -->
+    <!-- home section starts -->
 
-  <!-- home section starts -->
+    <section class="home">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <section
+            class="swiper-slide slide cta"
+            style="background: url(assets/images/home-slide-1.jpg) no-repeat"
+          >
+            <div class="content">
+              <h3>Achieve Success with German Certification Exams</h3>
+              <p>Your Path to Language Proficiency Starts Here</p>
+              <a href="#" class="btn">get started</a>
+            </div>
+          </section>
 
-  <section class="home">
-    <div class="swiper home-slider">
-      <div class="swiper-wrapper">
-        <section class="swiper-slide slide" style="background: url(assets/images/home-slide-1.jpg) no-repeat">
-          <div class="content">
-            <h3>Discover German and Germany's cultural heritage!</h3>
-            <p>German language courses, ÖSD exams and certificates acknowledged worldwide, available for children, adolescents, and adults alike.</p>
-            <a href="#" class="btn">get started</a>
-          </div>
-        </section>
+          <section
+            class="swiper-slide slide"
+            style="background: url(assets/images/home-slide-2.jpg) no-repeat"
+          >
+            <div class="content">
+              <h3>the best course you will find here!</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#" class="btn">get started</a>
+            </div>
+          </section>
 
-        <section class="swiper-slide slide" style="background: url(assets/images/home-slide-2.jpg) no-repeat">
-          <div class="content">
-            <h3>the best course you will find here!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#" class="btn">get started</a>
-          </div>
-        </section>
-
-        <section class="swiper-slide slide" style="background: url(assets/images/home-slide-3.jpg) no-repeat">
-          <div class="content">
-            <h3>the best course you will find here!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#" class="btn">get started</a>
-          </div>
-        </section>
+          <section
+            class="swiper-slide slide"
+            style="background: url(assets/images/home-slide-3.jpg) no-repeat"
+          >
+            <div class="content">
+              <h3>the best course you will find here!</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#" class="btn">get started</a>
+            </div>
+          </section>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
       </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
+    </section>
 
-  <!-- home section ends -->
+    <!-- home section ends -->
 
-  <!-- subjects section starts -->
+    <!-- subjects section starts -->
 
-  <section class="subjects">
-    <h1 class="heading">our popular subjects</h1>
-    <div class="box-container">
-      <div class="box" *ngFor="let subject of subjects">
-        <img [src]="subject.image" alt="" />
-        <h3>{{ subject.title }}</h3>
-        <p>{{ subject.modules }} modules</p>
+    <section class="subjects">
+      <h1 class="heading">our popular subjects</h1>
+      <div class="box-container">
+        <div class="box subject" *ngFor="let subject of subjects">
+          <img [src]="subject.image" alt="" />
+          <h3>{{ subject.title }}</h3>
+          <p>{{ subject.modules }} modules</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- subjects section ends -->
+    <!-- subjects section ends -->
 
-  <!-- home courses slider section starts -->
+    <!-- home courses slider section starts -->
 
-  <section class="home-courses">
-    <h1 class="heading">our popular courses</h1>
-    <div class="swiper home-courses-slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide slide" *ngFor="let course of courses">
-          <div class="image">
-            <img [src]="course.image" alt="" />
-            <h3>{{ course.title }}</h3>
-          </div>
-          <div class="content">
-            <h3>{{ course.title }}</h3>
-            <p>{{ course.description }}</p>
-            <a href="#" class="btn">read more</a>
+    <section class="home-courses">
+      <h1 class="heading">our popular courses</h1>
+      <div class="swiper home-courses-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide" *ngFor="let course of courses">
+            <div class="image">
+              <img [src]="course.image" alt="" />
+              <h3>{{ course.title }}</h3>
+            </div>
+            <div class="content">
+              <h3>{{ course.title }}</h3>
+              <p>{{ course.description }}</p>
+              <a href="#" class="btn">read more</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- home courses slider section ends -->
+    <!-- home courses slider section ends -->
 
-  <!-- footer section starts: moved to FooterComponent -->
-  <app-footer></app-footer>
-  <!-- footer section ends -->
-
-</body>
-
+    <!-- footer section starts: moved to FooterComponent -->
+    <app-footer></app-footer>
+    <!-- footer section ends -->
+  </body>
 </html>
