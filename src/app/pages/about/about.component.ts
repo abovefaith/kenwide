@@ -1,9 +1,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 import Swiper from 'swiper';
 
-// Import Swiper styles
-import 'swiper/swiper-bundle.min.css';
-
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
