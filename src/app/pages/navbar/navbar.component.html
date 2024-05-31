@@ -12,7 +12,9 @@
     <!-- header section starts -->
 
     <header class="header">
-      <a href="#" class="logo"><i class="fa-solid fa-school"></i> KenWide Language Institute
+      <a href="#" class="logo">
+        <!-- <i class="fa-solid fa-school"></i>  -->
+        KenWide Language Institute
       </a>
 
       <!-- <nav class="navbar">
@@ -32,15 +34,15 @@
 
       <nav class="navbar" [class.active]="isNavbarActive">
         <div id="close-navbar" class="fas fa-times" (click)="closeNavbar()"></div>
-        <a routerLink="/home" >Home</a>
-        <a routerLink="/about" >About</a>
-        <a routerLink="/course" >Course</a>
-        <a routerLink="/osd-exams" >ÖSD Exams</a>
-        <a routerLink="/contact" >Contact</a>
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+        <a routerLink="/osd-exams" routerLinkActive="active">ÖSD Exams</a>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+        <!-- <a routerLink="/course" >Course</a> -->
+        <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
       </nav>
 
       <div class="icons">
-        <div id="account-btn" class="fas fa-user" (click)="openAccountForm()"></div>
+        <!-- <div id="account-btn" class="fas fa-user" (click)="openAccountForm()"></div> -->
         <div id="menu-btn" class="fas fa-bars" (click)="openNavbar()"></div>
       </div>
 

@@ -62,6 +62,10 @@ html {
   }
 }
 
+a {
+  color: $green;
+}
+
 section {
   padding: 5rem 10%;
 }
@@ -71,14 +75,24 @@ section {
   background: url(assets/images/heading-bg.avif) no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 0px;
+  .heading-wrapper {
+    height: 100%t;
+    width: 100%;
+    background-color: #00000080;
+  }
 
   h3 {
     @include titleText(4rem);
-    color: $white
+    color: $white;
   }
 
   p {
     @include graphText(2rem);
+    text-transform: capitalize;
+    .current-route {
+      color: $green;
+    }
 
     a {
       color: $green;
@@ -127,7 +141,7 @@ section {
 
   .logo {
     margin-right: auto;
-    @include titleText(2.5rem);
+    @include titleText(2rem);
     font-weight: bolder;
 
     i {
@@ -154,10 +168,19 @@ section {
 
     a {
       margin-right: 2rem;
-      @include titleText(2rem);
+      @include titleText(1.6rem);
 
       &:hover {
         color: $green;
+        text-decoration: underline;
+        text-decoration-color: $green; 
+        text-decoration-thickness: 3px;
+      }
+      &.active {
+        color: $green;
+        text-decoration: underline;
+        text-decoration-color: $green; 
+        text-decoration-thickness: 3px;
       }
     }
   }
@@ -875,17 +898,16 @@ section {
         margin-top: 1rem;
 
         a {
-          height: 4.5rem;
-          width: 4.5rem;
-          line-height: 4.5rem;
-          font-size: 4.5rem;
-          background-color: $green;
-          color: $white;
-          margin-right: 0.3rem;
+          height: 2.5rem;
+          width: 2.5rem;
+          font-size: 2.5rem;
+          color: $green;
+          margin-right: 0.5rem;
           text-align: center;
 
           &:hover {
-            background-color: $black;
+            height: 2.7rem;
+            width: 2.7rem;
           }
         }
       }
@@ -977,16 +999,16 @@ section {
         display: block;
       }
 
-      &.active {
-        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
-        right: 0;
-      }
-
       a {
         display: block;
         margin: 1rem 0;
         text-align: center;
-        font-size: 3rem;
+        font-size: 1rem;
+        &.active {
+          box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+          right: 0;
+          color: $green;
+        }
       }
     }
   }
