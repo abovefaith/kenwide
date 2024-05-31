@@ -792,7 +792,7 @@ section {
         margin: 0.7rem 0;
 
         &:focus {
-          background: $green;
+          border: 3px solid $green;
           color: $white;
 
           &::placeholder {
