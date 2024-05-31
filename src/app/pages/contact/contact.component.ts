@@ -4,7 +4,7 @@ import { FAQItem } from '../../interfaces/faq.model';
 import Swiper from 'swiper';
 
 // Import Swiper styles
-import 'swiper/swiper-bundle.min.css';
+//import 'swiper/swiper-bundle.min.css';
 
 @Component({
   selector: 'app-contact',
