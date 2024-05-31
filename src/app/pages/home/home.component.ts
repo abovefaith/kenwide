@@ -19,9 +19,9 @@ export class HomeComponent implements AfterViewInit{
   ];
 
   courses = [
-    { image: 'assets/images/home-courses-1-1.jpg', title: 'A1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-    { image: 'assets/images/home-courses-1-2.jpg', title: 'A2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-    { image: 'assets/images/home-courses-1-3.jpg', title: 'B1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'assets/images/home-courses-1-1.jpg', title: 'A1', description: 'For the ÖSD Zertifikat A1 exam, candidates should demonstrate the ability to communicate at a basic level, handling simple everyday situations with ease.' },
+    { image: 'assets/images/home-courses-1-2.jpg', title: 'A2', description: 'For the ÖSD Zertifikat A2 exam, candidates must communicate effectively in basic situations, encompassing both personal and professional aspects of daily life.' },
+    { image: 'assets/images/home-courses-1-3.jpg', title: 'B1', description: `The ÖSD Zertifikat Deutsch Österreich B1 exam, for immigrants aged 16+, evaluates language skills for daily life and work, following CEFR and RCC standards, with content reflecting Austrian daily life.` },
     { image: 'assets/images/home-courses-1-4.jpg', title: 'B2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
     { image: 'assets/images/home-courses-1-5.jpg', title: 'C1', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
     { image: 'assets/images/home-courses-1-6.jpg', title: 'C2', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
