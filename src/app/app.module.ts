@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -13,6 +11,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { OsdExamsComponent } from './pages/osd-exams/osd-exams.component';
+//import {MatIconModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,7 @@ import { OsdExamsComponent } from './pages/osd-exams/osd-exams.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
