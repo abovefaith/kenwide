@@ -28,7 +28,7 @@
 
     <div class="icons">
       <i class="fas fa-envelope"></i>
-      <h3>email :</h3>
+      <h3>email</h3>
       <p><a href= "mailto: admin@kenwideinstitute.com"> {{'admin@kenwideinstitute.com'}} </a></p>
       <p><a href= "mailto: info@kenwideinstitute.com"> {{'info@kenwideinstitute.com'}} </a></p>
     </div>
@@ -45,12 +45,14 @@
       <img src="assets/images/contact-img.png" alt="" />
     </div>
 
-    <form action="" (submit)="sendMessage($event)">
+    <!-- <form action="" (submit)="sendMessage($event)"> -->
+    <form action="mailto:info@kenwideinstitute.com" method="post" enctype="text/plain">
+
       <h3>send us a message</h3>
-      <input type="text" placeholder="name" class="box" />
-      <input type="email" placeholder="email" class="box" />
-      <input type="number" placeholder="phone" class="box" />
-      <textarea name="" id="" class="box" placeholder="message" cols="30" rows="10"></textarea>
+      <input type="text" placeholder="name" name="name" class="box" />
+      <input type="email" placeholder="email" name="email" class="box" />
+      <input type="text" placeholder="phone" name="phone" class="box" />
+      <textarea id="" class="box" placeholder="message"  name="message" cols="30" rows="10"></textarea>
       <input type="submit" value="send message" class="btn" />
     </form>
   </div>
