@@ -31,9 +31,9 @@
           </div> -->
 
       <!-- navbar.component.html -->
-
+ 
       <nav class="navbar" [class.active]="isNavbarActive">
-        <div id="close-navbar" class="fas fa-times" (click)="closeNavbar()"></div>
+        <div id="close-navbar" class="fas fa-times" (click)="closeNavbar()"></div> 
         <a routerLink="/home" routerLinkActive="active">Home</a>
         <a routerLink="/osd-exams" routerLinkActive="active">ÖSD Exams</a>
         <a routerLink="/about" routerLinkActive="active">About</a>
@@ -42,8 +42,7 @@
       </nav>
 
       <div class="icons">
-        <!-- <div id="account-btn" class="fas fa-user" (click)="openAccountForm()"></div> -->
-        <div id="menu-btn" class="fas fa-bars" (click)="openNavbar()"></div>
+        <div id="menu-btn" class="fas fa-bars" (click)="transitionToggleMenu()"></div>
       </div>
 
       <!-- account form section starts -->
