@@ -10,74 +10,26 @@
 <body>
 
     <!-- header section starts -->
-
     <header class="header">
       <a href="#" class="logo">
-        <!-- <i class="fa-solid fa-school"></i>  -->
         KenWide Language Institute
       </a>
 
-      <!-- <nav class="navbar">
-            <div id="close-navbar" class="fas fa-times"></div>
-              <a href="home.html">home</a>
-              <a href="about.html">about</a>
-              <a href="courses.html">courses</a>
-              <a href="contact.html">contact</a>
-          </nav>
-
-          <div class="icons">
-              <div id="account-btn" class="fas fa-user" ></div>
-              <div id="menu-btn" class="fas fa-bars"></div>
-          </div> -->
-
-      <!-- navbar.component.html -->
- 
+      <!-- navbar section -->
       <nav class="navbar" [class.active]="isNavbarActive">
-        <div id="close-navbar" class="fas fa-times" (click)="closeNavbar()"></div> 
+        <div id="close-navbar" class="fas fa-times" (click)="closeNavbar()"></div>
         <a routerLink="/home" routerLinkActive="active">Home</a>
         <a routerLink="/osd-exams" routerLinkActive="active">ÖSD Exams</a>
         <a routerLink="/about" routerLinkActive="active">About</a>
-        <!-- <a routerLink="/course" >Course</a> -->
         <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
       </nav>
 
+      <!-- icons section -->
       <div class="icons">
         <div id="menu-btn" class="fas fa-bars" (click)="transitionToggleMenu()"></div>
       </div>
 
-      <!-- account form section starts -->
-
-      <!-- <div class="account-form">
-
-        <div id="close-form" class="fas fa-times"></div>
-
-        <div class="buttons">
-          <span class="btn active login-btn">login</span>
-          <span class="btn register-btn">register</span>
-        </div>
-
-        <form class="login-form active" action="">
-          <h3>login now</h3>
-          <input type="email" placeholder="enter your email" class="box" />
-          <input type="password" placeholder="enter your password" class="box" />
-          <div class="flex">
-            <input type="checkbox" name="" id="remember-me" />
-            <label for="remember-me">remember me</label>
-            <a href="#">forgot password?</a>
-          </div>
-          <input type="submit" value="login now" class="btn" />
-        </form>
-
-        <form class="register-form" action="">
-          <h3>register now</h3>
-          <input type="email" placeholder="enter your email" class="box" />
-          <input type="password" placeholder="enter your password" class="box" />
-          <input type="password" placeholder="confirm your password" class="box" />
-          <input type="submit" value="register now" class="btn" />
-        </form>
-      </div> -->
-
-      <!-- account-form.component.html -->
+      <!-- account form section -->
       <div class="account-form" [class.active]="isAccountFormActive">
         <div id="close-form" class="fas fa-times" (click)="closeAccountForm()"></div>
         <div class="buttons">
@@ -103,11 +55,9 @@
           <input type="submit" value="register now" class="btn" />
         </form>
       </div>
-
-      <!-- account form section ends -->
     </header>
-
     <!-- header section ends -->
 
 </body>
 </html>
+
