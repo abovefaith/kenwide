@@ -167,7 +167,7 @@ osd: Osd[] = [
 ];
 
   visibleOsd: Osd[] = [];
-  loadCount = 4;
+  loadCount = 6;
   showLoadMore = true;
 
   constructor() {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -13,6 +13,16 @@ export class NavbarComponent {
   isAccountFormActive: boolean = false;
   isRegisterActive: boolean = false;
   isLoginActive: boolean = true;  // Login form is active by default
+
+  constructor(private cdr:ChangeDetectorRef){
+
+  }
+
+  transitionToggleMenu(){
+    this.isNavbarActive = !this.isNavbarActive;
+    console.log(this.isNavbarActive);
+    this.cdr.markForCheck();
+  }
 
   openNavbar() {
     this.isNavbarActive = true;

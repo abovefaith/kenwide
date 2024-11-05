@@ -1,101 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>home</title>
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
-  <!-- font awesome cdn link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- swiper css link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
 
-  <!-- swiper css link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
+  <body>
+    <!-- header section starts: moved to NavbarComponent -->
+    <app-navbar></app-navbar>
+    <!-- header section ends -->
 
-<body>
-  <!-- header section starts: moved to NavbarComponent -->
-  <app-navbar></app-navbar>
-  <!-- header section ends -->
+    <!-- home section starts -->
 
-  <!-- home section starts -->
+    <section class="home">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <section
+            class="swiper-slide slide cta"
+            style="
+              background: linear-gradient(to bottom, #11b482ba, #02182bcc),
+                url(assets/images/home-slide-1.jpg) no-repeat;
+            "
+          >
+            <div class="content">
+              <h3>Discover German and Germany's cultural heritage!</h3>
+              <p>
+                Undertake German language short course Exams based on standards
+                provide by ÖSD in Austria. Available for children, teenagers,
+                and adults alike.
+              </p>
+              <a routerLink="/contact" class="btn">get started</a>
+            </div>
+          </section>
 
-  <section class="home">
-    <div class="swiper home-slider">
-      <div class="swiper-wrapper">
-        <section class="swiper-slide slide" style="background: url(assets/images/home-slide-1.jpg) no-repeat">
-          <div class="content">
-            <h3>Discover German and Germany's cultural heritage!</h3>
-            <p>German language courses, ÖSD exams and certificates acknowledged worldwide, available for children, adolescents, and adults alike.</p>
-            <a href="#" class="btn">get started</a>
-          </div>
-        </section>
+          <!-- <section
+            class="swiper-slide slide"
+            style="background: url(assets/images/home-slide-2.jpg) no-repeat"
+          >
+            <div class="content">
+              <h3>the best course you will find here!</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#" class="btn">get started</a>
+            </div>
+          </section>
 
-        <section class="swiper-slide slide" style="background: url(assets/images/home-slide-2.jpg) no-repeat">
-          <div class="content">
-            <h3>the best course you will find here!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#" class="btn">get started</a>
-          </div>
-        </section>
-
-        <section class="swiper-slide slide" style="background: url(assets/images/home-slide-3.jpg) no-repeat">
-          <div class="content">
-            <h3>the best course you will find here!</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#" class="btn">get started</a>
-          </div>
-        </section>
+          <section
+            class="swiper-slide slide"
+            style="background: url(assets/images/home-slide-3.jpg) no-repeat"
+          >
+            <div class="content">
+              <h3>the best course you will find here!</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#" class="btn">get started</a>
+            </div>
+          </section> -->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
       </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
+    </section>
 
-  <!-- home section ends -->
+    <!-- home section ends -->
 
-  <!-- subjects section starts -->
-
-  <section class="subjects">
-    <h1 class="heading">our popular subjects</h1>
-    <div class="box-container">
-      <div class="box" *ngFor="let subject of subjects">
-        <img [src]="subject.image" alt="" />
-        <h3>{{ subject.title }}</h3>
-        <p>{{ subject.modules }} modules</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- subjects section ends -->
-
-  <!-- home courses slider section starts -->
-
-  <section class="home-courses">
-    <h1 class="heading">our popular courses</h1>
-    <div class="swiper home-courses-slider">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide slide" *ngFor="let course of courses">
-          <div class="image">
-            <img [src]="course.image" alt="" />
-            <h3>{{ course.title }}</h3>
+    <!-- subjects section starts -->
+    <section class="roles-wrapper">
+      <div class="roles-list">
+        <h3 class="heading">Our Role as an ÖSD-Accredited Exam Center</h3>
+        <div class="roles">
+          <div class="box-container roles__card">
+            <h3>Coordination</h3>
+            <p>
+              Coordinate and oversee exam procedures according to ÖSD
+              guidelines.
+            </p>
           </div>
-          <div class="content">
-            <h3>{{ course.title }}</h3>
-            <p>{{ course.description }}</p>
-            <a href="#" class="btn">read more</a>
+          <div class="box-container roles__card">
+            <h3>Execution</h3>
+            <p>
+              Ensure the proper execution of exams and oversee examiners and
+              supervisors.
+            </p>
+          </div>
+          <div class="box-container roles__card">
+            <h3>Administration</h3>
+            <p>
+              Manage administrative tasks including maintaining master data and
+              internal ÖSD platform for exam administration.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="roles-image">
+        <div
+          style="
+            width: 80%;
+            height: 100%;
+            background: linear-gradient(to bottom, #11b482ba, #02182bcc),
+              url(assets/images/pic-1.jpg) no-repeat;
+          "
+        ></div>
+      </div>
+    </section>
 
-  <!-- home courses slider section ends -->
+    <!-- <section class="subjects">
+      <h1 class="heading">our popular subjects</h1>
+      <div class="box-container">
+        <div class="box subject" *ngFor="let subject of subjects">
+          <img [src]="subject.image" alt="" />
+          <h3>{{ subject.title }}</h3>
+          <p>{{ subject.modules }} modules</p>
+        </div>
+      </div>
+    </section> -->
 
-  <!-- footer section starts: moved to FooterComponent -->
-  <app-footer></app-footer>
-  <!-- footer section ends -->
+    <!-- subjects section ends -->
 
-</body>
+    <!-- home courses slider section starts -->
 
+    <section class="home-courses">
+      <h1 class="heading">our popular exams</h1>
+      <div class="swiper home-courses-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide" *ngFor="let course of courses">
+            <div class="image">
+              <img [src]="course.image" alt="" />
+              <h3>{{ course.title }}</h3>
+            </div>
+            <div class="content">
+              <h3>{{ course.title }}</h3>
+              <p>{{ course.description }}</p>
+              <a href="#" class="btn">read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- home courses slider section ends -->
+
+    <!-- footer section starts: moved to FooterComponent -->
+    <app-footer></app-footer>
+    <!-- footer section ends -->
+  </body>
 </html>

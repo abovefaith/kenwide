@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
 
-@import "swiper/swiper-bundle.min.css";
-
 * {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -46,7 +44,7 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 10px;
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
@@ -62,23 +60,37 @@ html {
   }
 }
 
+a {
+  color: $green;
+}
+
 section {
   padding: 5rem 10%;
 }
 
 .heading-link {
   text-align: center;
-  background: url(assets/images/heading-bg.avif) no-repeat;
+  background: linear-gradient(to bottom, #11b482ba, #02182bcc), url(assets/images/heading-bg.avif) no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 0px;
+  .heading-wrapper {
+    height: 100%t;
+    width: 100%;
+    background-color: #00000080;
+  }
 
   h3 {
     @include titleText(4rem);
-    color: $white
+    color: $white;
   }
 
   p {
     @include graphText(2rem);
+    text-transform: capitalize;
+    .current-route {
+      color: $green;
+    }
 
     a {
       color: $green;
@@ -127,7 +139,7 @@ section {
 
   .logo {
     margin-right: auto;
-    @include titleText(2.5rem);
+    @include titleText(2rem);
     font-weight: bolder;
 
     i {
@@ -154,10 +166,19 @@ section {
 
     a {
       margin-right: 2rem;
-      @include titleText(2rem);
+      @include titleText(1.6rem);
 
       &:hover {
         color: $green;
+        text-decoration: underline;
+        text-decoration-color: $green;
+        text-decoration-thickness: 3px;
+      }
+      &.active {
+        color: $green;
+        text-decoration: underline;
+        text-decoration-color: $green;
+        text-decoration-thickness: 3px;
       }
     }
   }
@@ -347,6 +368,7 @@ section {
 
 .home-courses {
   .slide {
+    height: 325px;
     text-align: center;
     position: relative;
     background: $light-green;
@@ -357,7 +379,7 @@ section {
     }
 
     .image {
-      padding: 2rem;
+      padding:0 0 2rem 0;
 
       img {
         width: 100%;
@@ -771,12 +793,12 @@ section {
         margin: 0.7rem 0;
 
         &:focus {
-          background: $green;
-          color: $white;
+          border: 3px solid $green;
+          // color: $white;
 
-          &::placeholder {
-            color: $light-white;
-          }
+          // &::placeholder {
+          //   color: $light-white;
+          // }
         }
       }
 
@@ -875,17 +897,16 @@ section {
         margin-top: 1rem;
 
         a {
-          height: 4.5rem;
-          width: 4.5rem;
-          line-height: 4.5rem;
-          font-size: 4.5rem;
-          background-color: $green;
-          color: $white;
-          margin-right: 0.3rem;
+          height: 2.5rem;
+          width: 2.5rem;
+          font-size: 2.5rem;
+          color: $green;
+          margin-right: 0.5rem;
           text-align: center;
 
           &:hover {
-            background-color: $black;
+            height: 2.7rem;
+            width: 2.7rem;
           }
         }
       }
@@ -977,16 +998,16 @@ section {
         display: block;
       }
 
-      &.active {
-        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
-        right: 0;
-      }
-
       a {
         display: block;
         margin: 1rem 0;
         text-align: center;
-        font-size: 3rem;
+        font-size: 1rem;
+        &.active {
+          box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+          right: 0;
+          color: $green;
+        }
       }
     }
   }
@@ -1007,5 +1028,109 @@ section {
 
   .about .content .about-title {
     font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    #menu-btn {
+      display: inline-block;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: -105%;
+      width: 30rem;
+      background: $white;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      z-index: 1200;
+
+      #close-navbar {
+        display: block;
+      }
+
+      a {
+        display: block;
+        margin: 1rem 0;
+        text-align: center;
+        font-size: 1rem;
+        &.active {
+          box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+          right: 0;
+          color: $green;
+        }
+      }
+    }
+  }
+
+  .home .slide .content h3 {
+    font-size: 3rem;
+  }
+
+  .roles-image {
+    display: none;
+  }
+}
+
+.roles-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4rem 0px;
+  .heading {
+    text-align: start;
+  }
+}
+
+.roles {
+  &__card {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    padding: 2rem;
+    font-size: 1.5rem;
+    background: $light-green;
+    cursor: pointer;
+
+    &:hover {
+      background: $green;
+
+      h3 {
+        color: $white;
+      }
+
+      p {
+        color: $light-white;
+      }
+    }
+  }
+}
+
+.roles-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roles-list {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .roles-image {
+    display: none;
+  }
+  .roles-list {
+    width: 100%;
+  }
+
+  .roles-wrapper {
+    .heading {
+      text-align: center;
+    }
   }
 }
